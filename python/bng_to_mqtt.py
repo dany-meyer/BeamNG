@@ -74,6 +74,5 @@ while True:
     strJSON = strJSON.replace('True', 'true')
     
     mqttClient.publish('uwc_beamng', strJSON)
-    #mqttClient.publish('uwc_beamng', str(vehicle_signals))
-
+   
     time.sleep(2)
