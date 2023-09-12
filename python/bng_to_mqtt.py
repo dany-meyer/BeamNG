@@ -69,7 +69,7 @@ mqttClient = mqtt.Client()
 mqttClient.on_connect = on_connectHIVE
 
 
-process_connect2ServerHIVE()
+#process_connect2ServerHIVE()
 
 print ("START poll to read date from vehicle and publish to MQTT with topic 'uwc_beamng' every 2 seconds")
 while True:
@@ -77,7 +77,7 @@ while True:
     ego.sensors.poll('electrics')
     
     data = IMU.poll() # Fetch the latest readings from the sensor.
-    #print("Position:", data[0]['pos'])
+    print("Position:", data[0]['pos'])
     
     # write updated information into variable
     vehicle_signals = ego.sensors['electrics']
@@ -89,6 +89,7 @@ while True:
     jsonObj = json.loads(strJSON);
     jsonObj['pos']=data[0]['pos'];
     
-    mqttClient.publish('uwc_beamng', json.dumps(jsonObj))
+    #print(json.dumps(jsonObj))
+    #mqttClient.publish('uwc_beamng', json.dumps(jsonObj))
    
     time.sleep(2)
