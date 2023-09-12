@@ -62,6 +62,7 @@ while True:
     data = IMU.poll() # Fetch the latest readings from the sensor.
     print("Position:", data[0])
     #print("Position:", data[0]['pos'])
+    print()
     
     
     time.sleep(2) 
