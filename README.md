@@ -9,6 +9,9 @@ python/bng_to_mqtt.py
 - the pi must be connected to Internet
 - Use a running CAN-Application on the other end of VN 1610-Can-Adapter e.g. running CANoe-Simulation or running Simulink-Modell
 
+## Useful examples in Python 
+https://github.com/BeamNG/BeamNGpy
+
 ## Enable integration of BeamNG-Software in MATLAB and Simulink
 https://github.com/BeamNG/BeamNG-MATLAB-Simulink-integration
 
